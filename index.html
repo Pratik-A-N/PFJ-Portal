@@ -5,26 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Your Certificate for PadhegaIndia</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="favicon" href="favicon.ico">
 </head>
 
 <body>
-    <header>
-        <img src="./padhega india.png" alt="Padhega India Logo">
-        <h4>Get your certificate of subscription to</h4>
-        <h1> <a href="https://www.youtube.com/channel/UCUwURiBONxHJw1vdxU_RGkw" target="_blank"
-                rel="noopener noreferrer">Padhega India</a></h1>
-    </header>
+    
     <main>
+        <form method="post" autocomplete="off" name="google-sheet">
+            <div >
+                <!-- <input type="text" name="Name"  placeholder="Your Name *" value="" required=""/> -->
+                <input required type="text" name="Name" autocomplete="name" placeholder="Accha Baccha" id="name" minlength="3" maxlength="16">
+            </div>
+            
+            <div >
+                <input type="number" name="Phone"  placeholder="Your Contact Number *" value="" required=""/>
+            </div>
+            <div >
+                <input type="text" name="Message"  placeholder="Your Message *" value="" required=""/>
+            </div>
+            <div >
+                <input type="email" name="Email"  placeholder="Your Email *" value="" required=""/>
+            </div>
+            <Button type="submit" id="submitBtn">Get Certificate</Button> 
+            <!-- <button type="submit">submit</button> -->
+        </form>
 
-        <label for="name">Type Your Name</label>
-        <input required type="text" name="Name" autocomplete="name" placeholder="Accha Baccha" id="name" minlength="3"
-            maxlength="16">
-        <Button id="submitBtn">Get Certificate</Button>
-
+        <!-- <label for="name">Type Your Name</label> -->
+            
 
     </main>
+    <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwm2uCLPGwUx39FttHlAAcGRg0rj3s_dLb4juihmeRHG67nhHV9aCmwURfcfrExXzp4vw/exec'
+            const form = document.forms['google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .catch(error => console.error('Error!', error.message))
+            })
+    </script>
     <script src="https://unpkg.com/pdf-lib@1.4.0"></script>
     <script src="./FileSaver.js"></script>
     <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
