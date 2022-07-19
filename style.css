@@ -1,90 +1,157 @@
-:root {
-  --dark-color: #212121;
+.fluid-container{
+  overflow-x: hidden;
+  background-image: url('./Rectangle\ 1.png');
 }
 
-body {
-  font-family: system-ui;
+.cust{
+  background: #0F0F0F80;
+}
+
+.tabs{
+  padding: 0 5vw;
+}
+
+.a{
+  padding-top: 5vh;
+  letter-spacing: 1.5vh;
+  color: #FFFFFFB2;
+  font-size: 2.5vh;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.b{
+  
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 15vh;
+  font-weight: bold;
+}
+
+.camp{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3vh;
+  font-weight: bold;
+}
+
+.will{
+  padding: 0;
+}
+.c{
+  padding: 2vh;
+  margin-left: 33vh;
+  margin-bottom: 2vh;
+  /* padding-left: 4vh; */
+  background: rgba(255, 255, 255, 0.1);
+  /* opacity: 0.2; */
+}
+
+.d{
+  margin-bottom: 3vh;
+
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  font-size: 2vh;
+}
+
+#btn{
+  text-decoration: none;
+  color: white;
+}
+
+.e:hover{
+  background: rgba(255, 255, 255, 0.1);
+
+}
+
+.e{
+  background: rgba(255, 255, 255, 0.27);
+  font-family: 'Montserrat', sans-serif;
+ text-transform: uppercase;
+  font-size: 3vh;
   text-align: center;
-  margin-top: 40px;
-  font-size: 1.5em;
+  padding: 2vh 0;
+  margin-bottom: 3vh;
 }
 
-h4 {
-  font-weight: normal;
-  margin-bottom: 5px;
-}
-h1 {
-  font-weight: normal;
-  margin-top: 0;
-  margin-bottom: 40px;
-  font-size: 2em;
+.outer-alter{
+  background-color: black;
+  padding-top: 8vh ;
+  margin-bottom: 8vh;
+  padding-bottom: 8vh ;
+
 }
 
-img {
-  border-radius: 150%;
-  height: 120px;
+.way{
+  letter-spacing: 1.5vh;
+  color: white;
+  font-size: 2.5vh;
+  font-family: 'Montserrat', sans-serif;
 }
 
-main {
+.f{
+  background: rgba(255, 255, 255, 0.1);
+  padding-top: 3vh;
+  padding-bottom: 3vh;
+
+  padding-left: 31.5vh;
+  margin-bottom: 8vh;
+}
+
+.tarike{
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  /* margin: 0 15vh; */
+}
+
+.h{
+  height: 50vh;
+  
+}
+
+.i{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
   align-items: center;
 }
-main * {
-  margin-bottom: 12px;
+
+.j{
+  font-family: 'Montserrat', sans-serif;
+  position: absolute;
+  color: white;
+  bottom: 5vh;
+  font-size: 2vh;
+  font-weight: bold;
 }
 
-input {
-  text-align: center;
-  font-size: large;
-  outline: none;
-  border: none;
-  border-bottom: 1px solid black;
-  text-transform: capitalize;
+.contact{
+  background-color: black;
 }
 
-/* for styling the autocomplete style */
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-  transition: background-color 5000s ease-in-out 0s;
-  -webkit-text-fill-color: var(--dark-color) !important;
+.w{
+  background: rgba(255, 255, 255, 0.27);
+  padding: 1vh 0;
 }
 
-button {
-  background: #8bc34a;
-  color: #fff;
-  border: none;
-  font-size: 0.8em;
-  padding: 5px 15px;
-  margin: 20px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-a {
-  color: #6492f6;
+.manage-inner{
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-/* dark mode css */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: var(--dark-color);
-    color: #fff;
-  }
-  input,
-  input:active {
-    background: var(--dark-color);
-    border-color: #fff;
-    color: #fff;
+
+.fa{
+  
+    text-decoration:none;
+  color:white;
+  margin:2vh;
   }
 
-  /* for styling the autocomplete style */
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    transition: background-color 5000s ease-in-out 0s;
-    -webkit-text-fill-color: #fff !important;
-  }
+.department{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.7vh;
+  /* font-weight: bold; */
 }
