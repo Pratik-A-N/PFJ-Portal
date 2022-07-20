@@ -61,8 +61,8 @@ const generatePDF = async (name) => {
     width = Math.ceil(text.clientWidth);
     formattedWidth = width ;
     console.log(width);
-    return formattedWidth;
     document.body.removeChild(text);
+    return formattedWidth;
   }
   
   
