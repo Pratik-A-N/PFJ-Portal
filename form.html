@@ -9,8 +9,12 @@
     <!-- <link rel="favicon" href="favicon.ico"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/x-icon" href="./black1.png">
+
 </head>
 
 <body>
@@ -22,17 +26,17 @@
                   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                   </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent" style="float: right;">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                       <li class="nav-item tabs">
-                        <a class="nav-link active " aria-current="page" href="#" style="color: white;">Home</a>
+                        <a class="nav-link active " aria-current="page" href="./index.html" style="color: white;">Home</a>
                       </li>
                       <li class="nav-item tabs">
                         <a class="nav-link active " href="#" style="color: white;">About Us</a>
                       </li>
-                      <li class="nav-item tabs">
+                      <!-- <li class="nav-item tabs">
                         <a class="nav-link active " href="#" style="color: white;">Alternative to plastic</a>
-                      </li>
+                      </li> -->
                       <li class="nav-item tabs">
                         <a class="nav-link active " href="#" style="color: white;">News Feed</a>
                       </li>
@@ -46,150 +50,182 @@
             </nav>
 
         </div>
-        <div class="row display-flex justify-content-center a">PARTICIPATE IN CELEBRATING</div>
-        <div class="row display-flex justify-content-center b">Plastic-free July</div>
-        <div class="row">
-            <div class="col-lg-3 c">
-                <div class="will a">THE WILL</div>
-                <div class="camp">About the Campaign</div>
-            </div>    
+        
+        <div class="row display-flex justify-content-center camp py-5">
+            Enter your details
         </div>
-        <div class="row display-flex justify-content-center">
-            <div class="col-lg-8 d">
-                We, humans have a tendency to react. When things tend to go out of hand, we just can’t wait to get them back on track. Sometimes, all it needs is a call. A wake-up call. 
-            </div>
-            <div class="col-lg-8 d">
-                
+        <form method="post" autocomplete="off" name="google-sheet">
+        <div class="row display-flex justify-content-center py-3">
 
-                A similar call was made by our Government last year. The GOI notified the Plastic Management Rules in August last year, which mandate a ban on manufacturing, import, stocking, distribution, sale, and use of single-use plastic items from July 1, 2022. 
-                
-                
-            </div>
-            <div class="col-lg-8 d">
-                We at Abhyuday, IIT Bombay in support of the decision of Govt of India initiated this ‘Say NO To Plastic’ Campaign. We aim to remind everyone of the simple steps we can take in our daily life to create a huge impact and save our mother earth from the plastic peril.
-                
-            </div>
-        </div>
-        <a href="" id="btn">
-            <div class="row display-flex justify-content-center ">
-                <div class="col-lg-3 e">
-                    Take a Pledge Now
+            <div class="col-lg-8 col-md-10 u">
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 p"> 
+                        <label for="">Name: </label>
+                    </div>
+                    <div class="col-lg-7 col-md-6  r">
+                        <input required type="text" name="Name" autocomplete="name" id="name" minlength="3" maxlength="16">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 p"> 
+                        <label for="">Contact No: </label>
+                    </div>
+                    <div class="col-lg-7 col-md-6 r">
+                        <input type="number" name="Phone"   value="" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 p"> 
+                        <label for="">Email: </label>
+                    </div>
+                    <div class="col-lg-7 col-md-6 r">
+                        <input type="email" name="Email"   value="" required=""/>    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 p"> 
+                        <label for="">Are you a student of IIT Bombay: </label>
+                    </div>
+                    <div class="col-lg-7 col-md-6 r">
+                        <select id="seeAnotherField" name="student" required>
+                            <option value="">Are you IITB Student</option>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>                             
+                          </select>
+                    </div>
+                </div>
+                <div class="row" id="otherFieldDiv">
+                    <div class="col-lg-5 col-md-6 p"> 
+                        <label for="">Roll no.: </label>
+                    </div>
+                    <div class="col-lg-7 col-md-6 r">
+                        <input type="text" name="roll" >
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 col-md-6 p"> 
+                        <label for="">State: </label>
+                    </div>
+                    <div class="col-lg-7 col-md-6 r">
+                        <select name="State" id="" required>
+                            <option value="">Select your state</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-        </a>
-        <div class="outer-alter">
-            <div class="row f">
-                <div class="col-lg-5 g">
-                    <div class="way">THE WAY</div>
-                    <div class="camp">Alternatives to Single-Use plastic</div>
+        </div>
+        
+        <div class="row display-flex justify-content-center py-5" >
+            <div class="col-lg-3 col-md-6 e">
+                    <Button id="submitBt"  ><a href="#ple" style="color: white; text-decoration: none;" >Read Pledge</a> </Button>              
+            </div>
+        </div>
+        
+    <!-- <a href="" id="btn">
+        </a> -->
+        
+        <div class="outer-altr" id="ple">
+            <div class="row display-flex justify-content-center camp" >Pledge</div>
+            <div class="row display-flex justify-content-center pam">
+                <div class="col-lg-8 col-md-10">
+                    <p>We realize that usage of plastic has reached out of bounds and this is a matter of concern. I pledge that I will cooperate in stopping the plastic peril. I promise that I will replace single-use plastic items with more sustainable options.</p>
+                    <p>I will create awareness about the harmful effects of excess plastic usage by encouraging every person so that we can bring things back on track and not ruin our natural balance further.</p>
+                    <p>Today I pledge that I will contribute my best to live a responsible life.</p>
+                </div>
+            </div>
+            <div class="row display-flex justify-content-center py-3">
+                <div class="col-lg-3 col-md-6 e">
+                        <Button type="submit" id="submitBtn" style="color: white;">I Pledge</Button>                     
+                </div>
+            </div>
+        </div>
+        </form>
+
+        <div class="views">
+
+        </div>
+        
+        <div class="contact" id="contact">
+            <div class="row display-flex justify-content-center camp w">
+                Contact us
+            </div>
+            <div class="row" style="margin: 5vh 0;">
+                <div class="col-lg-6">
+                    <div class="manage-inner">
+                        <div class="camp" style="font-size: 2.7vh;">Prarthana Kumari</div>
+                        <div class="department">Events and Fellowships Manager</div>
+                        <a href="mailto:prarthana@abhyudayiitb.org" style="text-decoration: none;"><div class="department">prarthana@abhyudayiitb.org</div></a>
+                        <div class="department">+91 83402 84862</div>
+                    </div>
+                      
+                </div>
+                <div class="col-lg-6">
+                    <div class="manage-inner">
+                        <div class="camp" style="font-size: 2.7vh;"> Satyan Reddy</div>
+                        <div class="department">Events and Fellowships Manager</div>
+                        <a href="mailto:satyan@abhyudayiitb.org" style="text-decoration: none;"><div class="department">satyan@abhyudayiitb.org</div></a>
+                        <div class="department">+91 9704384433</div>
+                    </div>
                 </div>
             </div>
             <div class="row display-flex justify-content-center">
-                <div class="col-lg-8 d">
-                    With the evolution of science, our lives became more comfortable than ever. We have experienced progress in almost all aspects of our life. But in the run for growth & comfort, we lost track of the line between luxury and exploitation. 
-
+                <div style="width: 8vh;" >
+                    <a href="https://www.facebook.com/abhyuday.iitb/" target="/" class="fa fa-facebook" style="font-size: 2.5vh;"></a>
                 </div>
-                <div class="col-lg-8 d">
-                    
-    
-                    As the father of our nation stated, “Be the change, you want to see in the world.” Here are a few ideas to take your first step in this plastic-free journey.
-                    
-                    
+                <div style="width: 8vh;">
+                    <a href="https://www.instagram.com/iitbombay_abhyuday/" target="/" class="fa fa-instagram" style="font-size: 2.5vh;"></a>
                 </div>
-                
+                <div style="width: 8vh;">
+                    <a href="https://www.linkedin.com/company/abhyuday-iit-bombay/mycompany/" target="/" class="fa fa-linkedin" style="font-size: 2.5vh;"></a>
+                </div>
+                <div style="width: 8vh;">
+                    <a href="https://twitter.com/Abhyuday_IITB?s=07" target="/" class="fa fa-twitter" style="font-size: 2.5vh;"></a>
+                </div>
+                <div style="width: 8vh;">
+                    <a href="https://www.youtube.com/c/AbhyudayIITBombay" target="/" class="fa fa-youtube" style="font-size: 2.5vh;"></a>
+                </div>
             </div>
-            <div id="carouselExampleControls z" class="carousel slide" data-bs-ride="carousel" style="margin: 5vh 0;">
-                <div class="carousel-inner">
-                  <div class="carousel-item active  ">
-                    <div class="row tarike">
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/1.png" class="h" alt="...">
-                            <div class="j">Copper Bottle</div>
+            <a href="https://abhyudayiitb.org" target="/" style="text-decoration: none;"><div class="row display-flex justify-content-center camp py-3" style="font-size: 2.5vh;">
+                © Abhyuday | IIT Bombay
+            </div></a>
 
-                        </div>
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/2.png" class="h" alt="...">
-                            <div class="j">Cloth bags</div>
-
-                        </div>
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/3.png" class="h" alt="...">
-                            <div class="j">Wooden comb</div>
-
-                        </div>
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/4.png" class="h" alt="...">
-                            <div class="j">Foam fruit net</div>
-
-                        </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item ">
-                    <div class="row tarike">
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/1.png" class="h" alt="...">
-                            <div class="j">Copper Bottle</div>
-                        </div>
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/2.png" class="h" alt="...">
-                            <div class="j">Cloth bags</div>
-                            
-                        </div>
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/3.png" class="h" alt="...">
-                            <div class="j">Wooden comb</div>
-                            
-                        </div>
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/4.png" class="h" alt="...">
-                            <div class="j">Foam fruit net</div>
-
-                        </div>
-                    </div>
-                  </div>
-                  <div class="carousel-item ">
-                    <div class="row tarike">
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/1.png" class="h" alt="...">
-                            <div class="j">Copper Bottle</div>
-
-                        </div>
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/2.png" class="h" alt="...">
-                            <div class="j">Cloth bags</div>
-
-                        </div>
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/3.png" class="h" alt="...">
-                            <div class="j">Wooden comb</div>
-
-                        </div>
-                        <div class="col-lg-2 i">
-                            <img src="./Assets/Images/4.png" class="h" alt="...">
-                            <div class="j">Foam fruit net</div>
-
-                        </div>
-                    </div>
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-            </div>
         </div>
-        <a href="" id="btn">
-            <div class="row display-flex justify-content-center ">
-                <div class="col-lg-3 e" style="margin-bottom: 7vh;">
-                    Take a Pledge Now
-                </div>
-            </div>
-        </a>
-        
     </div>
 
 
@@ -200,60 +236,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <!-- <main>
-        <form method="post" autocomplete="off" name="google-sheet">
-            <div >
-                <input required type="text" name="Name" autocomplete="name" placeholder="Accha Baccha" id="name" minlength="3" maxlength="16">
-            </div>
-            
-            <div >
-                <input type="number" name="Phone"  placeholder="Your Contact Number *" value="" required=""/>
-            </div>
-            <div >
-                <input type="text" name="Message"  placeholder="Your Message *" value="" required=""/>
-            </div>
-            <div >
-                <input type="email" name="Email"  placeholder="Your Email *" value="" required=""/>
-            </div>
-            <Button type="submit" id="submitBtn">Get Certificate</Button> 
-        </form>
-
-            
-
-    </main> -->
     <script>
             const scriptURL = 'https://script.google.com/macros/s/AKfycbwm2uCLPGwUx39FttHlAAcGRg0rj3s_dLb4juihmeRHG67nhHV9aCmwURfcfrExXzp4vw/exec'
             const form = document.forms['google-sheet']
@@ -261,7 +243,7 @@
             form.addEventListener('submit', e => {
               e.preventDefault()
               fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => alert("Thanks for Contacting us..! We Will Contact You Soon..."))
+                .then(response => alert("Pledge taken Successfully!"))
                 .catch(error => console.error('Error!', error.message))
             })
     </script>
@@ -270,6 +252,40 @@
     <script src="https://unpkg.com/@pdf-lib/fontkit@0.0.4"></script>
     <script src="./index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script>
+        $("#seeAnotherField").change(function() {
+  if ($(this).val() == "yes") {
+    $('#otherFieldDiv').show();
+    $('#otherField').attr('required', '');
+    $('#otherField').attr('data-error', 'This field is required.');
+  } else {
+    $('#otherFieldDiv').hide();
+    $('#otherField').removeAttr('required');
+    $('#otherField').removeAttr('data-error');
+  }
+});
+$("#seeAnotherField").trigger("change");
+
+$("#seeAnotherFieldGroup").change(function() {
+  if ($(this).val() == "yes") {
+    $('#otherFieldGroupDiv').show();
+    $('#otherField1').attr('required', '');
+    $('#otherField1').attr('data-error', 'This field is required.');
+    $('#otherField2').attr('required', '');
+    $('#otherField2').attr('data-error', 'This field is required.');
+  } else {
+    $('#otherFieldGroupDiv').hide();
+    $('#otherField1').removeAttr('required');
+    $('#otherField1').removeAttr('data-error');
+    $('#otherField2').removeAttr('required');
+    $('#otherField2').removeAttr('data-error');
+  }
+});
+$("#seeAnotherFieldGroup").trigger("change");
+
+    </script>
+    
 </body>
 
 </html>
+

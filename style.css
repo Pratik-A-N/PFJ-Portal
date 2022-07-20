@@ -82,6 +82,14 @@
 
 }
 
+.outer-altr{
+  background-color: black;
+  padding-top: 8vh ;
+  /* margin-bottom: 8vh; */
+  padding-bottom: 8vh ;
+
+}
+
 .way{
   letter-spacing: 1.5vh;
   color: white;
@@ -154,4 +162,169 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 2.7vh;
   /* font-weight: bold; */
+}
+
+label{
+  color: white;
+  margin-left: 5vh;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5vh;
+}
+
+.u{
+  background: rgba(255, 255, 255, 0.18);
+padding: 3vh 5vh;
+}
+
+input,select{
+  width: 30vw;
+  background: #D9D9D9;
+  border: none;
+  padding: 0.5vh;
+  color: black;
+}
+
+.r{
+  padding: 2vh;
+  display:flex;
+  justify-content: center;
+}
+
+.p{
+  padding: 3vh 10vh;
+}
+
+#submitBtn,#submitBt{
+background: none;
+border: none;
+}
+
+#submitBtn:hover,#submitBt:hover{
+cursor: pointer;
+}
+
+.pam{
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5vh;
+}
+
+
+
+
+/* DEMO-SPECIFIC STYLES */
+.typewriter p {
+  color: #fff;
+  font-family: monospace;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
+}
+.zm{
+  display: none;
+}
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+ @keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange }
+}
+
+@media screen and (max-width:1024px) {
+  .h{
+    height:35vh;
+  }
+  .tabs{
+    padding: 0 3vw;
+  }
+  .b{
+    font-size: 13vh;
+  }
+  .camp{
+    font-size: 2.8vh;
+  }
+  .c{
+    margin-left: 24vh;
+  }
+  .e{
+    font-size: 2.5vh;
+  }
+  .f{
+    padding-left: 23.5vh;
+  }
+  label{
+    margin-left: 2vh;
+    font-size: 2vh;
+  }
+} 
+
+@media screen and (max-width:768px){
+  .a{
+    font-size: 2vh;
+  }
+  .b{
+    font-size: 10vh;
+  }
+  .manage-inner{
+    margin: 2vh 0;
+  }
+}
+
+@media screen and (max-width:425px) {
+  .a{
+    letter-spacing: 0.5vh;
+  }
+  .b{
+    font-size: 6vh;
+  }
+  .c{
+    margin-left: 1vh;
+  }
+  .f{
+    padding-left: 2vh;
+  }
+  
+  .zd{
+    display: none;
+  }
+  .zm{
+    display: block;
+  }
+
+  input ,select{
+    width: 70vw;
+  }
+  .department{
+    font-size: 2vh;
+  }
+  .outer-altr,.outer-alter,.jhbxh{
+    padding-left: 2vh;
+    padding-right: 2vh;
+  }
+  .pam{
+    font-size: 2vh;
+  }
+
+}
+
+@media screen and (max-width:320px) {
+  .a{
+    letter-spacing: 0.2vh;
+  }
+  .b{
+    font-size: 5vh;
+  }
+  .department{
+    font-size: 2vh;
+  }
 }

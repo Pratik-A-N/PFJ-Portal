@@ -1,4 +1,5 @@
 const userName = document.getElementById("name");
+
 const submitBtn = document.getElementById("submitBtn");
 
 const { PDFDocument, rgb, degrees } = PDFLib;
@@ -36,19 +37,43 @@ const generatePDF = async (name) => {
   );
 
   // Embed our custom font in the document
+
+
   const SanChezFont = await pdfDoc.embedFont(fontBytes);
 
   // Get the first page of the document
   const pages = pdfDoc.getPages();
   const firstPage = pages[0];
 
+  function getTextWidth(name) {
+
+    text = document.createElement("span");
+    document.body.appendChild(text);
+
+    // text.style.font = "";
+    text.style.fontSize = 58 + "px";
+    text.style.height = 'auto';
+    text.style.width = 'auto';
+    text.style.position = 'absolute';
+    text.style.whiteSpace = 'no-wrap';
+    text.innerHTML = name;
+
+    width = Math.ceil(text.clientWidth);
+    formattedWidth = width ;
+    console.log(width);
+    return formattedWidth;
+    document.body.removeChild(text);
+  }
+  
+  
+
   // Draw a string of text diagonally across the first page
   firstPage.drawText(name, {
-    x: 300,
-    y: 270,
+    x: (840 - getTextWidth(name))/2,
+    y: 300,
     size: 58,
     font: SanChezFont,
-    color: rgb(0.2, 0.84, 0.67),
+    color: rgb(0.5,0.5,0.5),
   });
 
   // Serialize the PDFDocument to bytes (a Uint8Array)
@@ -62,7 +87,7 @@ const generatePDF = async (name) => {
 
   var file = new File(
     [pdfBytes],
-    "Padhega India Subscription Certificate.pdf",
+    "Plastic Free July Pledge.pdf",
     {
       type: "application/pdf;charset=utf-8",
     }
@@ -70,4 +95,5 @@ const generatePDF = async (name) => {
  saveAs(file);
 };
 
-// init();
+// init();9
+// console.log(userName);
