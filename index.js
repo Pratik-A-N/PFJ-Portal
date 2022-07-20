@@ -57,12 +57,13 @@ const generatePDF = async (name) => {
     text.style.position = 'absolute';
     text.style.whiteSpace = 'no-wrap';
     text.innerHTML = name;
+    // text.style.display = none;
 
     width = Math.ceil(text.clientWidth);
     formattedWidth = width ;
     console.log(width);
-    return formattedWidth;
     document.body.removeChild(text);
+    return formattedWidth;
   }
   
   
