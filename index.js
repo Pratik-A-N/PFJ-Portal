@@ -51,7 +51,7 @@ const generatePDF = async (name) => {
     document.body.appendChild(text);
 
     // text.style.font = "";
-    text.style.fontSize = 58 + "px";
+    text.style.fontSize = 45 + "px";
     text.style.height = 'auto';
     text.style.width = 'auto';
     text.style.position = 'absolute';
@@ -70,11 +70,11 @@ const generatePDF = async (name) => {
 
   // Draw a string of text diagonally across the first page
   firstPage.drawText(name, {
-    x: (840 - getTextWidth(name))/2,
-    y: 300,
-    size: 58,
+    x: (830 - getTextWidth(name))/2,
+    y: 310,
+    size: 45,
     font: SanChezFont,
-    color: rgb(0.5,0.5,0.5),
+    color: rgb(0,0,0),
   });
 
   // Serialize the PDFDocument to bytes (a Uint8Array)

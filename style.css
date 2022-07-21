@@ -77,14 +77,12 @@
 .outer-alter{
   background-color: black;
   padding-top: 8vh ;
-  margin-bottom: 8vh;
   padding-bottom: 8vh ;
 
 }
 
 .outer-altr{
   background-color: black;
-  padding-top: 8vh ;
   /* margin-bottom: 8vh; */
   padding-bottom: 8vh ;
 
@@ -228,6 +226,28 @@ cursor: pointer;
 .zm{
   display: none;
 }
+
+
+.nf{
+  height: 30vh;
+  text-align: center;
+  /* background-image: url(./Assets/Images/n1.jpeg); */
+}
+
+.nj{
+  font-size: 1.5vh;
+}
+
+.nig{
+  height: 30vh;
+  width: 20vw;
+}
+
+.challenge{
+  padding: 5vh 0;
+}
+
+
 /* The typing effect */
 @keyframes typing {
   from { width: 0 }
@@ -266,6 +286,9 @@ cursor: pointer;
     margin-left: 2vh;
     font-size: 2vh;
   }
+  .nig{
+    width: 23vw;
+  }
 } 
 
 @media screen and (max-width:768px){
@@ -277,6 +300,9 @@ cursor: pointer;
   }
   .manage-inner{
     margin: 2vh 0;
+  }
+  .nig{
+    height: 23vh;
   }
 }
 
@@ -314,7 +340,10 @@ cursor: pointer;
   .pam{
     font-size: 2vh;
   }
-
+  .nig{
+    height: 24vh;
+    width: 49vw;
+  }
 }
 
 @media screen and (max-width:320px) {
